@@ -13,11 +13,11 @@ class PageController extends Controller
 
     public function index(){
 
-        // $trains = Train::all();
+        $trains = Train::all();
 
-        $departure = new DateTime();
+        // $departure = new DateTime();
 
-        $trains = Train::where('departure', '>=', $departure->format('Y-m-d H:i:s'))->get();
+        // $trains = Train::where('departure', '>=', $departure->format('Y-m-d H:i:s'))->get();
 
         return view('home', compact('trains'));
     }
